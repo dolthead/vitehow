@@ -2,7 +2,7 @@
 
 Based on [the YouTube tutorial](https://www.youtube.com/watch?v=-FwQ6c6OreQ) from [@alvarosabu](https://github.com/alvarosabu).
 
-[View the commit](https://github.com/dolthead/vitehow/commit/25d0b3c456c3df8db843588a47f5a7051e1fe0c8) for all these changes.
+[View the commit](https://github.com/dolthead/vitehow/commit/2ab6f7e311942ef8ea472cdb9a00e17a9a873d5e) for all these changes.
 
 If you don't care how it's done--you just want the vite-based tabs starter--then fork and clone away!
 
