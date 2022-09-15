@@ -6,6 +6,12 @@ Based on [the YouTube tutorial](https://www.youtube.com/watch?v=-FwQ6c6OreQ) fro
 
 If you don't care how it's done--you just want the vite-based tabs starter--then fork and clone away!
 
+## Why?
+
+The prod build using vue-cli is **3MB**, while the build with VITE is **413KB** (86% smaller)!
+
+Also, the dev live reload times are super-much quicklier with VITE. ⚡️
+
 ## Start with the Ionic Vue tabs starter
 
 > `npm i -g @ionic/cli@latest`
@@ -101,6 +107,10 @@ after `<div id="app"></div>`
 > `npm run coverage`
 > 
 > `npm run e2e`
+
+## Prod build
+
+> `npm run build`
 
 -----
 
