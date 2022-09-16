@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dev": "vite dev",
     "serve": "vite dev",
     "build": "vue-tsc --noEmit && vite build",
     "ionic:serve": "vite dev",
