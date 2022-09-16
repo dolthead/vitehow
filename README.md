@@ -22,49 +22,63 @@ Also, the dev live reload times are super-much quicklier with VITE. ⚡️
 >
 > `code .`
 
-## Edit tsconfig.json
+Edit tsconfig.json:
+
 - `types: [ "node" ]`
 - `exclude: [ "node_modules", "tests" }`
   
-## Edit package.json
+Edit package.json:
+
 - remove all @vue/cli lines
 - remove all jest lines
 - replace scripts with
-    - `"serve": "vite dev",`
-    - `"build": "vue-tsc --noEmit && vite build,"`
-    -  `"e2e": "cypress run",`
-    -  `"test": "vitest",`
-    -  `"coverage": "vitest run --coverage"`
+```
+"serve": "vite dev",
+"build": "vue-tsc --noEmit && vite build,"
+"e2e": "cypress run",
+"test": "vitest",
+"coverage": "vitest run --coverage",
+```
+
+Install vite and vitest, with dependencies:
 
 > `npm i -D vue-tsc vite @vitejs/plugin-vue jshint` // for vite
 > 
 > `npm i -D vitest jsdom @vitest/coverage-c8` // for vitest 
 
-## Remove jest.config.js
+Remove jest.config.js:
 
 > `rm jest.config.js`
 
-## Add vite.config.ts
+Add vite.config.ts
 
-```import { defineConfig } from "vite";
+```
+import { defineConfig } from "vite";
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 export default defineConfig({
     define: {
-        "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+        'process.env': {},
     },
     resolve:{
         alias:{
             '@' : path.resolve(__dirname, './src')
         },
     },
-    plugins: [ vue() ]
+	plugins: [ 
+		vue(),
+	],
+	server: {
+		port: 8100,
+        open: true,
+	},
 });
 ```
 
-## Add vitest.config.ts
+Add vitest.config.ts:
 
-```import { mergeConfig } from 'vite';
+```
+import { mergeConfig } from 'vite';
 import { defineConfig } from 'vitest/config';
 import viteConfig from './vite.config';
 import { fileURLToPath, URL } from "url";
@@ -89,7 +103,7 @@ export default mergeConfig(viteConfig, defineConfig({
 ));
 ```
 
-## Move & edit index.html
+Move & edit index.html:
 
 > `mv public/index.html .`
 > 
@@ -99,9 +113,11 @@ add `<script type="module" src="/src/main.ts"></script>`
 after `<div id="app"></div>`
 
 ## Start it up
+
 > `npm run serve`
 
 ## Run unit and e2e tests
+
 > `npm run test`
 >
 > `npm run coverage`
@@ -111,6 +127,41 @@ after `<div id="app"></div>`
 ## Prod build
 
 > `npm run build`
+
+-----
+
+## Add PWA support
+
+> `npm i -D vite-plugin-pwa`
+
+Update your `vite.config.ts`:
+
+```
+import { VitePWA } from 'vite-plugin-pwa';
+...
+	plugins: [ 
+		vue(),
+		VitePWA({ registerType: 'autoUpdate' }),
+	],
+```
+
+Update your `tsconfig.json`:
+```
+"types": [
+    "node",
+    "vite-plugin-pwa/client",
+],
+```
+
+Add to your `package.json` scripts:
+
+```
+"serve:pwa": "vite build --mode pwa && vite preview --mode pwa",
+```
+
+Run the PWA on your machine:
+
+> `npm run serve:pwa`
 
 -----
 
