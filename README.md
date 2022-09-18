@@ -103,6 +103,8 @@ export default mergeConfig(viteConfig, defineConfig({
 ));
 ```
 
+Add `"baseUrl": "http://localhost:8100"` to `cypress.json`.
+
 Move & edit index.html:
 
 > `mv public/index.html .`
