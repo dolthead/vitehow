@@ -34,7 +34,7 @@ Edit package.json:
 - replace scripts with
 ```
 "serve": "vite dev",
-"build": "vue-tsc --noEmit && vite build,"
+"build": "vue-tsc --noEmit && vite build",
 "e2e": "cypress run",
 "test": "vitest",
 "coverage": "vitest run --coverage",
