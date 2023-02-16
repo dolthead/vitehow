@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+  import ExploreContainer from '@/components/ExploreContainer.vue';
+</script>
+
 <template>
   <ion-page>
     <ion-header>
@@ -16,8 +21,3 @@
     </ion-content>
   </ion-page>
 </template>
-
-<script lang="ts" setup>
-  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-  import ExploreContainer from '@/components/ExploreContainer.vue';
-</script>
