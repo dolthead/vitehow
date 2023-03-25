@@ -1,5 +1,7 @@
 # Vite with the Ionic tabs starter!
 
+## Ionic 7 (rc3) with Vue 3, Vite and Vitest
+
 Based on [the YouTube tutorial](https://www.youtube.com/watch?v=-FwQ6c6OreQ) from [@alvarosabu](https://github.com/alvarosabu).
 
 [View the commit](https://github.com/dolthead/vitehow/commit/2ab6f7e311942ef8ea472cdb9a00e17a9a873d5e) for all these changes.
@@ -164,6 +166,8 @@ Add to your `package.json` scripts:
 Run the PWA on your machine:
 
 > `npm run serve:pwa`
+
+## [Update to Ionic 7 rc3](https://ionicframework.com/docs/v7/updating/7-0#vue)
 
 -----
 
