@@ -32,3 +32,4 @@ npm-debug.log*
 .firebaserc
 /.firebase/
 firebase.json
+tests/e2e/videos/

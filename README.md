@@ -25,7 +25,7 @@ Also, the dev live reload times are super-much quicklier with VITE. ⚡️
 Edit tsconfig.json:
 
 - `types: [ "node" ]`
-- `exclude: [ "node_modules", "tests" }`
+- `exclude: [ "node_modules", "tests" ]`
   
 Edit package.json:
 
